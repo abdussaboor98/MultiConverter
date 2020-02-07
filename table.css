@@ -1,0 +1,22 @@
+table, th, td 
+{
+    border: 1px solid white;
+    border: 1px solid white;
+    border-collapse: collapse;
+    color: white;
+    margin-left:auto;
+    margin-right: auto;
+    margin-top: 2%;
+}
+
+th, td
+{
+    padding:1%;
+}
+
+.main_body
+{
+    width:80%;
+    margin-left:auto;
+    margin-right:auto;
+}

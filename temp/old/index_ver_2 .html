@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Multi-Converter</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="style.css"/>        
+        <script src="./script_ver_2.js"></script>
+    </head>
+    <body onload="form1.reset();">
+        <form id="form1">
+        <div id="banner">
+            <h1 id="heading">Multi-Converter</h1>
+        </div>
+        <div id="main_body">
+            <div >
+                <label>Choose conversion type:</label>
+                <select class="dropdown" id="dd" onchange="selectedUnit()">
+                    <option selected disabled value="0">Choose Option</option>
+                    <option value="length">Length/Distance</option>
+                    <option value="area">Area</option>
+                    <option value="vol">Volume</option>
+                    <option value="temp">Temperature</option>
+                    <option value="weight">Weight</option>
+                    <option value="time">Time</option>
+                </select>
+            </div>
+            <div id="empty" class="divs">
+                
+            </div>
+            <div id="length" class="divs">
+                <h4 class="toLeft">Length/Distance:</h4>
+                <label>Value:</label>
+                <input type="text" id="lin" placeholder="Enter Value" onkeypress="return validate(event);" />
+                <br /><br />
+                <label>From:</label>
+                <select class="dropdown">
+                    <option selected disabled value="0">Choose Option</option>
+                    <option value=""></option>
+                </select>
+                <label>To:</label>
+                <select class="dropdown">
+                    <option selected disabled value="0">Choose Option</option>
+                    <option value=""></option>
+                </select>
+                <br />
+                <div class="button_div">
+                    <button class="buttons">Convert!</button>                
+                </div>
+            </div>
+            <div id="area" class="divs">
+                <h4 class="toLeft">Area:</h4>
+                <label>Value:</label>
+                <input type="text" id="ain" placeholder="Enter Value" onkeypress="return validate(event);"/>
+                <br /><br />
+                <label>From:</label>
+                <select class="dropdown">
+                    <option selected disabled value="0">Choose Option</option>
+                    <option value=""></option>
+                </select>
+                <label>To:</label>
+                <select class="dropdown">
+                    <option selected disabled value="0">Choose Option</option>
+                    <option value=""></option>
+                </select>
+            </div>
+            <div id="vol" class="divs">
+                <h4 class="toLeft">Volume:</h4>
+                <label>Value:</label>
+                <input type="text" id="vin" placeholder="Enter Value"  onkeypress="return validate(event);"/>
+                <br /><br />
+                <label>From:</label>
+                <select class="dropdown">
+                    <option selected disabled value="0">Choose Option</option>
+                    <option value=""></option>
+                </select>
+                <label>To:</label>
+                <select class="dropdown">
+                    <option selected disabled value="0">Choose Option</option>
+                    <option value=""></option>
+                </select>
+                <br />
+                <div class="button_div">
+                    <button class="buttons">Convert!</button>                
+                </div>
+            </div>
+            <div id="temp" class="divs">
+                <h4 class="toLeft">Temperature:</h4>
+                <label>Value:</label>
+                <input type="text" id="tein" placeholder="Enter Value"  onkeypress="return validateTemp(event);" onkeyup="conTemp();"/>
+                <br /><br />
+                <label>From:</label>
+                <select class="dropdown" id="from_temp" onchange="conTemp();">
+                    <option selected disabled value="0">Choose Option</option>
+                    <option value="K">Kelvin (K)</option>
+                    <option value="C">Celsius (&deg;C)</option>
+                    <option value="F">Fahrenheit (&deg;F)</option>
+                </select>
+                <label>To:</label>
+                <select class="dropdown" id="to_temp" onchange="conTemp();">
+                    <option selected disabled value="0">Choose Option</option>
+                    <option value="K">Kelvin (K)</option>
+                    <option value="C">Celsius (&deg;C)</option>
+                    <option value="F">Fahrenheit (&deg;F)</option>
+                </select>
+                <div class="result_div">
+                    <h5>Result:</h5>
+                    <span id="temp_result"></span>
+                </div>
+            </div>
+            <div id="weight" class="divs">
+                <h4 class="toLeft">Weight:</h4>
+                <label>Value:</label>
+                <input type="text" id="win" placeholder="Enter Value" onkeypress="return validate(event);"/>
+                <br /><br />
+                <label>From:</label>
+                <select class="dropdown">
+                    <option selected disabled value="0">Choose Option</option>
+                    <option value=""></option>
+                </select>
+                <label>To:</label>
+                <select class="dropdown">
+                    <option selected disabled value="0">Choose Option</option>
+                    <option value=""></option>
+                </select>
+                <br />
+                <div class="button_div">
+                    <button class="buttons">Convert!</button>                
+                </div>
+            </div>
+            <div id="time" class="divs">
+                <h4 class="toLeft">Time:</h4>
+                <label>Value:</label>
+                <input type="text" id="tiin" placeholder="Enter Value"  onkeypress="return validate(event);"/>
+                <br /><br />
+                <label>From:</label>
+                <select class="dropdown">
+                    <option selected disabled value="0">Choose Option</option>
+                    <option value=""></option>
+                </select>
+                <label>To:</label>
+                <select class="dropdown">
+                    <option selected disabled value="0">Choose Option</option>
+                    <option value=""></option>
+                </select>
+                <br />
+                <div class="button_div">
+                    <button class="buttons">Convert!</button>                
+                </div>
+            </div>
+        </div>
+        </form>
+        </body>
+</html>

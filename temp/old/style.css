@@ -1,0 +1,28 @@
+#banner
+{
+    background-color:beige;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-family: "Lucida Console", Monaco, monospace; 
+}
+#main_body
+{
+    padding-top: 50px;
+    padding-bottom: 5px;  
+}
+.divs
+{
+    margin-top: 5%;
+    padding: 20px;
+    display: none;
+}
+body
+{
+    text-align:center;
+    background-color:wheat;
+    align-content: center;
+}
+.button_div
+{
+    padding :10%;
+}

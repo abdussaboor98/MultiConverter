@@ -1,0 +1,251 @@
+<html>
+    <head>
+        <title>Multi-Converter</title>
+        <script src="mainscript.js"></script>
+        <link rel="stylesheet" type="text/css" href="./mainstyle.css"/>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="./style.css"/>        
+        <script src="./validation.js"></script>
+        <script src="./conversion.js"></script>
+    </head>
+    <body>
+        <div id="container">
+            <div id="banner">
+                <img src="media/logo.png" alt="Multi-Converter Logo">
+                <div id="navbar">
+                    <ul id="navbarul">
+                        <li ><a href="index.html"> Home</a></li>
+                        <li class="active"><a href="unitconverter.html">Units Converter</a></li>
+                        <li><a href="currencyconverter.html">Currency Converter</a></li>
+                        <li style="float:right;border:none;"><a href="about.html" >About</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div id="main_body">
+                <!--The content here-->
+                <form id="form1">
+                    <div >
+                        <label>Choose Conversion Type:</label>
+                        <select class="dropdown" id="dd" onchange="selectedUnit()">
+                            <option selected disabled value="0">Choose Option</option>
+                            <option value="length">Length/Distance</option>
+                            <option value="area">Area</option>
+                            <option value="vol">Volume</option>
+                            <option value="temp">Temperature</option>
+                            <option value="weight">Weight</option>
+                            <option value="time">Time</option>
+                        </select>
+                    </div>
+                    <div id="length" class="divs">
+                        <h4 class="toLeft">Length/Distance:</h4>
+                        <label>Value:</label>
+                        <input type="text" id="lin" placeholder="Enter Value" onkeypress="return validate(event);" onkeyup="conLength();" />
+                        <br /><br />
+                        <label>From:</label>
+                        <select class="dropdown" id="from_length" onchange="conLength();">
+                            <option selected disabled value="0">Choose Option</option>
+                            <option value="A">Angstrom (&Aring;)</option>
+                            <option value="cm">Centimeter (cm)</option>
+                            <option value="dam">Decameter (dam)</option>
+                            <option value="dm">Decimeter (dm)</option>
+                            <option value="ft">Feet (ft)</option>
+                            <option value="Gm">Gigameter (Gm)</option>
+                            <option value="hm">Hectometer (hm)</option>
+                            <option value="in">Inch (in)</option>
+                            <option value="km">Kilometer (km)</option>
+                            <option value="Mm">Megameter (Mm)</option>
+                            <option value="m">Meter (m)</option>
+                            <option value="um">Micrometer (μm)</option>
+                            <option value="mi">Mile (mi)</option>
+                            <option value="mm">Millimeter (mm)</option>
+                            <option value="nm">Nanometer (nm)</option>
+                            <option value="nmi">Nautical Mile (nmi)</option>
+                            <option value="pm">Picometer (pm)</option>
+                            <option value="yd">Yard (yd)</option>
+                            <option value="ly">Lightyears(ly)</option>
+                        </select>
+                        <label>To:</label>
+                        <select class="dropdown" id="to_length" onchange="conLength();">
+                            <option selected disabled value="0">Choose Option</option>
+                            <option value="A">Angstrom (&Aring;)</option>
+                            <option value="cm">Centimeter (cm)</option>
+                            <option value="dam">Decameter (dam)</option>
+                            <option value="dm">Decimeter (dm)</option>
+                            <option value="ft">Feet (ft)</option>
+                            <option value="Gm">Gigameter (Gm)</option>
+                            <option value="hm">Hectometer (hm)</option>
+                            <option value="in">Inch (in)</option>
+                            <option value="km">Kilometer (km)</option>
+                            <option value="Mm">Megameter (Mm)</option>
+                            <option value="m">Meter (m)</option>
+                            <option value="um">Micrometer (μm)</option>
+                            <option value="mi">Mile (mi)</option>
+                            <option value="mm">Millimeter (mm)</option>
+                            <option value="nm">Nanometer (nm)</option>
+                            <option value="nmi">Nautical Mile (nmi)</option>
+                            <option value="pm">Picometer (pm)</option>
+                            <option value="yd">Yard (yd)</option>
+                            <option value="ly">Lightyears(ly)</option>
+                        </select>
+                        <br />
+                        <div class="result_div">
+                            <h5>Result:</h5>
+                            <span id="length_result"></span>
+                        </div>
+                    </div>
+                    <div id="area" class="divs">
+                        <h4 class="toLeft">Area:</h4>
+                        <label>Value:</label>
+                        <input type="text" id="ain" placeholder="Enter Value" onkeypress="return validate(event);" onkeyup="conArea();" />
+                        <br /><br />
+                        <label>From:</label>
+                        <select class="dropdown" id="from_area" onchange="conArea();">
+                            <option selected disabled value="0">Choose Option</option>
+                            <option value="ac">Acre (ac)</option>
+                            <option value="ha">Hectare (ha)</option>
+                            <option value="cm2">Square Centimeter (cm2)</option>
+                            <option value="dam2">Square Decameter (dam2)</option>
+                            <option value="dam2">Square Decimeter (dm2)</option>
+                            <option value="ft2">Square Feet (ft2)</option>
+                            <option value="hm2">Square Hectometer (hm2)</option>
+                            <option value="in2">Square Inch (in2)</option>
+                            <option value="km2">Square Kilometer (km2)</option>
+                            <option value="m2">Square Meter (m2)</option>
+                            <option value="mi2">Square Mile (mi2)</option>
+                            <option value="mm2">Square Millimeter (mm2)</option>
+                            <option value="yd2">Square Yard (yd2)</option>
+                        </select>
+                        <label>To:</label>
+                        <select class="dropdown" id="to_area" onchange="conArea();">
+                            <option selected disabled value="0">Choose Option</option>
+                            <option value="ac">Acre (ac)</option>
+                            <option value="ha">Hectare (ha)</option>
+                            <option value="cm2">Square Centimeter (cm2)</option>
+                            <option value="dam2">Square Decameter (dam2)</option>
+                            <option value="dam2">Square Decimeter (dm2)</option>
+                            <option value="ft2">Square Feet (ft2)</option>
+                            <option value="hm2">Square Hectometer (hm2)</option>
+                            <option value="in2">Square Inch (in2)</option>
+                            <option value="km2">Square Kilometer (km2)</option>
+                            <option value="m2">Square Meter (m2)</option>
+                            <option value="mi2">Square Mile (mi2)</option>
+                            <option value="mm2">Square Millimeter (mm2)</option>
+                            <option value="yd2">Square Yard (yd2)</option>
+                        </select>
+                        <div class="result_div">
+                            <h5>Result:</h5>
+                            <span id="area_result"></span>
+                        </div>
+                    </div>
+                    <div id="vol" class="divs">
+                        <h4 class="toLeft">Volume:</h4>
+                        <label>Value:</label>
+                        <input type="text" id="vin" placeholder="Enter Value"  onkeypress="return validate(event);"/>
+                        <br /><br />
+                        <label>From:</label>
+                        <select class="dropdown">
+                            <option selected disabled value="0">Choose Option</option>
+                            <option value=""></option>
+                        </select>
+                        <label>To:</label>
+                        <select class="dropdown">
+                            <option selected disabled value="0">Choose Option</option>
+                            <option value=""></option>
+                        </select>
+                        <br />
+                        <div class="result_div">
+                            <h5>Result:</h5>
+                            <span id="vol_result"></span>
+                        </div>
+                    </div>
+                    <div id="temp" class="divs">
+                        <h4 class="toLeft">Temperature:</h4>
+                        <label>Value:</label>
+                        <input type="text" id="tein" placeholder="Enter Value"  onkeypress="return validateTemp(event);" onkeyup="conTemp();"/>
+                        <br /><br />
+                        <label>From:</label>
+                        <select class="dropdown" id="from_temp" onchange="conTemp();">
+                            <option selected disabled value="0">Choose Option</option>
+                            <option value="K">Kelvin (K)</option>
+                            <option value="C">Celsius (&deg;C)</option>
+                            <option value="F">Fahrenheit (&deg;F)</option>
+                        </select>
+                        <label>To:</label>
+                        <select class="dropdown" id="to_temp" onchange="conTemp();">
+                            <option selected disabled value="0">Choose Option</option>
+                            <option value="K">Kelvin (K)</option>
+                            <option value="C">Celsius (&deg;C)</option>
+                            <option value="F">Fahrenheit (&deg;F)</option>
+                        </select>
+                        <div class="result_div">
+                            <h5>Result:</h5>
+                            <span id="temp_result"></span>
+                        </div>
+                    </div>
+                    <div id="weight" class="divs">
+                        <h4 class="toLeft">Weight:</h4>
+                        <label>Value:</label>
+                        <input type="text" id="win" placeholder="Enter Value" onkeypress="return validate(event);"/>
+                        <br /><br />
+                        <label>From:</label>
+                        <select class="dropdown">
+                            <option selected disabled value="0">Choose Option</option>
+                            <option value=""></option>
+                        </select>
+                        <label>To:</label>
+                        <select class="dropdown">
+                            <option selected disabled value="0">Choose Option</option>
+                            <option value=""></option>
+                        </select>
+                        <br />
+                        <div class="result_div">
+                            <h5>Result:</h5>
+                            <span id="weight_result"></span>
+                        </div>
+                    </div>
+                    <div id="time" class="divs">
+                        <h4 class="toLeft">Time:</h4>
+                        <label>Value:</label>
+                        <input type="text" id="tiin" placeholder="Enter Value"  onkeypress="return validate(event);" onkeyup="conTime();"/>
+                        <br /><br />
+                        <label>From:</label>
+                        <select class="dropdown" id="from_time" onchange="conTime();">
+                            <option selected disabled value="0">Choose Option</option>
+                            <option value="ns">Nanosecond (ns)</option>
+                            <option value="us">Microsecond (&mu;s)</option>
+                            <option value="ms">Millisecond (ms)</option>
+                            <option value="s">Second (s)</option>
+                            <option value="min">Minute (min)</option>
+                            <option value="hr">Hour (hr)</option>
+                            <option value="day">Day</option>
+                            <option value="wk">Week</option>
+                            <option value="4nite">Fortnight</option>
+                            <option value="yr">Year</option>
+                        </select>
+                        <label>To:</label>
+                        <select class="dropdown" id="to_time" onchange="conTime();">
+                            <option selected disabled value="0">Choose Option</option>
+                            <option value="ns">Nanosecond (ns)</option>
+                            <option value="us">Microsecond (&mu;s)</option>
+                            <option value="ms">Millisecond (ms)</option>
+                            <option value="s">Second (s)</option>
+                            <option value="min">Minute (min)</option>
+                            <option value="hr">Hour (hr)</option>
+                            <option value="day">Day</option>
+                            <option value="wk">Week</option>
+                            <option value="4nite">Fortnight</option>
+                            <option value="yr">Year</option>
+                        </select>
+                        <div class="result_div">
+                            <h5>Result:</h5>
+                            <span id="time_result"></span>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div id="footer">
+            <p>Copyrights reserved.</p>
+        </div>
+    </body>
+</html>
